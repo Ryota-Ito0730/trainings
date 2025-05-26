@@ -44,7 +44,9 @@ import pathObj from "./gulpfilePathConfig.js";
  */
 const compileSass = () => {
   return src(pathObj.sass.src)
-    .pipe(sass({ outputStyle: "expanded" }))
+    // コンパイルエラー発生時に自動的に止まらないように、
+    // "on("error", sass.logError)"を追加
+    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(dest(pathObj.sass.dist))
     .pipe(browserSync.stream());
 };

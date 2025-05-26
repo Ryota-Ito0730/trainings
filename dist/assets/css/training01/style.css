@@ -1,0 +1,25 @@
+body {
+  font-size: 1.6rem;
+}
+
+.header {
+  padding: 9px 0;
+  background: #fff;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.header__inner .head01,
+.header__inner .nav {
+  align-self: flex-start;
+  font-size: 1.4rem;
+  color: #24292E;
+}
+.header__inner .head01__list,
+.header__inner .nav__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 33px;
+}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body {
+  font-size: 1.6rem;
+}
+
+// ヘッダー
+.header {
+  padding:9px 0;
+  background: #fff;
+  &__inner {
+  display: flex;
+  justify-content: space-between;
+    .head01,
+    .nav{
+      align-self: flex-start;
+      font-size: 1.4rem;
+      color:#24292E;
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 33px;
+      }
+    }
+  }
+}

@@ -16,8 +16,8 @@ const pathObj = {
     dist : "./dist/"
   },
   img : {
-    src: "./_src/assets/img/*.{jpg,jpeg,png}",
-    dist : "./dist/assets/img/", // 拡張子の変更はしない場合に指定
+    src: "./_src/assets/**/*.{jpg,jpeg,png}",
+    dist : "./dist/assets/", // 拡張子の変更はしない場合に指定
     distWebp : "./dist/assets/img/webp" // WebPへ変換する場合に指定
   },
 }
