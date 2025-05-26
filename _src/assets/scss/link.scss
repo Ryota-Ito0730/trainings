@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*
+アクセシビリティの観点から、ブラウザの拡大縮小機能の標準的なサイズ調整値に
+沿った文字サイズで調整ができるよう、1rem = 16pxとする。
+14px	0.875rem
+16px	1rem
+18px	1.125rem
+20px	1.25rem
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-weight: 400;
+}
+
+.m-link {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: inline-block;
+  border-radius: 60px;
+  background: #333;
+  background: #fff;
+  color: #fff;
+  text-decoration: unset;
+  padding: 20px 40px;
+  border: 2px solid #333;
+  outline: 2px solid transparent;
+  transition:
+    background 0.4s,
+    border 0.4s,
+    outline 0.4s;
+  &:hover,
+  &:focus-visible {
+    color: #333;
+    background: #fff;
+    outline: 2px solid blue;
+    outline: 2px solid blue;
+  }
+}
