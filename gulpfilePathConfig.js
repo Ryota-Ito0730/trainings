@@ -8,7 +8,7 @@
 
 const pathObj = {
   sass : {
-    src: "./_src/assets/scss/*.scss",
+    src: "./_src/assets/scss/**/*.scss",
     dist : "./dist/assets/css/"
   },
   pug : {

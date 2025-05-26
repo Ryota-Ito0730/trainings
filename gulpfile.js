@@ -15,7 +15,7 @@ const browserSyncStart = (done) => {
     server: {
       baseDir: "./dist", // ルートとなるディレクトリを指定
     },
-    startPath: "index.html", 
+    startPath: "training01/index.html", 
     notify: true,// 画面右上の通知の有無
   });
   done();
