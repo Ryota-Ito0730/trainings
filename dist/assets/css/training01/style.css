@@ -1,19 +1,24 @@
-body {
-  font-size: 1.6rem;
-}
-
 .header {
-  padding: 9px 0;
+  padding: 9px 0 11px;
   background: #fff;
 }
 .header__inner {
+  max-width: 966px;
   display: flex;
   justify-content: space-between;
+  margin: auto;
+}
+.header__inner .nav {
+  margin: 11px 61px 0 0;
+}
+.header__inner .head01 {
+  width: 120px;
+  margin: 0 0 0 66px;
 }
 .header__inner .head01,
 .header__inner .nav {
   align-self: flex-start;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: #24292E;
 }
 .header__inner .head01__list,
@@ -22,4 +27,33 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 33px;
+}
+
+.mv__bg {
+  height: 600px;
+  background: url(../../img/training01/mv.png) no-repeat center center/cover;
+}
+
+@media (max-width: 1280px) {
+  .header__inner .nav {
+    margin: clamp(10px, 0.859375vw, 11px) clamp(10px, 5.35625vw, 61px) 0 0;
+  }
+  .header__inner .head01 {
+    margin: 0 0 0 clamp(15px, 5.15625vw, 66px);
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 10px 0;
+  }
+  .header__inner .nav {
+    margin: 10px 20px 0 0;
+  }
+  .header__inner .head01 {
+    margin: 0 0 0 15px;
+  }
+  .mv__bg {
+    height: 600px;
+    background: url(../../img/training01/mv_sp.png) no-repeat center center/cover;
+  }
 }
