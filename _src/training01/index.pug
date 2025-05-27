@@ -24,14 +24,45 @@ html(lang="ja")
               a.nav__link(href="#bicycle") Bicycle
     main.main 
       .main__inner
-        //- ↓ここは背景画像として処理
         .mv 
           .mv__bg
         section.sec
-          h2.sec__title
-          .sec__content 
-            .sec__content
-            .sec__img 
-              img
-        
+          h2.sec__title.head02 About
+          .content
+            .content__inner
+              .content-img 
+                img(src="../assets/img/training01/about_image.png", alt="KAKERU MIYAICHIのプロフィール画像。緑色の帽子とグレーのバーカー、黒の短パンを履き、スマートフォンを見ながら歩いています。")
+              .content-desc
+                h3.head03 KAKERU MIYAICHI
+                p.desc
+                  | テキストテキストテキストテキストテキストテキストテキスト
+                  br.visible-sp 
+                  | テキストテキストテキストテキストテキストテキストテキスト
+                  br.visible-sp 
+                  | テキストテキストテキストテキストテキストテキストテキスト
+
+        section.sec.sec--bicycle
+          h2.sec__title.head02 Bicycle
+          .content.content--bicycle
+            .content__inner.content__inner--bicycle
+              .media
+                .media__img
+                  img(src="../assets/img/training01/bicycle_item01.png", alt="自転車のサドル部分を中心に、夕焼けの中の街並みを背景にして撮影されている。")
+                .media__desc
+                  h3.media__title タイトルタイトル
+                  p.media__text テキストテキストテキスト
+              .media
+                .media__img
+                  img(src="../assets/img/training01/bicycle_item02.png", alt="自転車がレンガ調の壁に立てかけられた状態で撮影されている。")
+                .media__desc
+                  h3.media__title タイトルタイトル
+                  p.media__text テキストテキストテキスト
+              .media
+                .media__img
+                  img(src="../assets/img/training01/bicycle_item03.png", alt="自転車の後輪部分を車体横方向から撮影されている。")
+                .media__desc
+                  h3.media__title タイトルタイトル
+                  p.media__text テキストテキストテキスト
+    footer.footer
+      small.footer__copy &copy; 2020 Profile
 

@@ -1,3 +1,19 @@
+.visible-sp {
+  display: none;
+}
+
+.visible-pc {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .visible-sp {
+    display: block;
+  }
+  .visible-pc {
+    display: none;
+  }
+}
 .header {
   padding: 9px 0 11px;
   background: #fff;
@@ -9,11 +25,11 @@
   margin: auto;
 }
 .header__inner .nav {
-  margin: 11px 61px 0 0;
+  margin: 11px 58px 0 0;
 }
 .header__inner .head01 {
   width: 120px;
-  margin: 0 0 0 66px;
+  margin: 0 0 0 55px;
 }
 .header__inner .head01,
 .header__inner .nav {
@@ -34,12 +50,95 @@
   background: url(../../img/training01/mv.png) no-repeat center center/cover;
 }
 
+.sec {
+  padding: 76px 15px 0;
+  max-width: 966px;
+  margin: auto;
+}
+.sec__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 0;
+}
+.sec__title::before {
+  position: absolute;
+  content: "";
+  background: currentColor;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.content {
+  max-width: 528px;
+  margin: 70px auto 0;
+}
+.content__inner {
+  display: flex;
+  gap: 30px;
+}
+
+.content-img {
+  min-width: 100px;
+  width: 100px;
+  align-self: center;
+}
+
+.content-desc .head03 {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.content-desc .desc {
+  font-size: 0.875rem;
+  margin: 16px 0 0 0;
+  line-height: 1.55em;
+  letter-spacing: 0.3px;
+}
+
+.sec--bicycle {
+  padding: 94px 15px 0;
+}
+
+.content--bicycle {
+  max-width: 858px;
+  margin: 60px auto 0;
+}
+.content--bicycle .content__inner--bicycle {
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+}
+
+.media__desc {
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+.media__title {
+  font-size: 1rem;
+}
+.media__text {
+  margin: 12px 0 0 0;
+  font-size: 0.875rem;
+}
+
+.footer {
+  padding: 102px 0 8px 0;
+  text-align: center;
+}
+.footer__copy {
+  font-size: 0.5rem;
+}
+
 @media (max-width: 1280px) {
   .header__inner .nav {
-    margin: clamp(10px, 0.859375vw, 11px) clamp(10px, 5.35625vw, 61px) 0 0;
+    margin: clamp(10px, 0.859375vw, 11px) clamp(10px, 4.53125vw, 58px) 0 0;
   }
   .header__inner .head01 {
-    margin: 0 0 0 clamp(15px, 5.15625vw, 66px);
+    margin: 0 0 0 clamp(15px, 4.296875vw, 55px);
   }
 }
 @media (max-width: 767px) {
@@ -53,7 +152,22 @@
     margin: 0 0 0 15px;
   }
   .mv__bg {
-    height: 600px;
     background: url(../../img/training01/mv_sp.png) no-repeat center center/cover;
+  }
+  .content {
+    margin: 60px 0 0 0;
+  }
+  .content__inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content-desc .desc {
+    line-height: 1.43em;
+  }
+  .sec--bicycle {
+    padding: 107px 15px 0;
+  }
+  .content--bicycle .content__inner--bicycle {
+    gap: 30px;
   }
 }
