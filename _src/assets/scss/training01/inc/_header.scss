@@ -1,0 +1,43 @@
+.header {
+  padding:9px 0 11px;
+  background: #fff;
+  &__inner {
+    max-width: 966px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    .nav {
+      margin: 11px 58px 0 0;
+    }
+    .head01 {
+      width: 120px;
+      margin: 0 0 0 55px;
+    }
+    .head01,
+    .nav{
+      align-self: flex-start;
+      font-size: 0.875rem;
+      color:#24292E;
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 33px;
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .header {
+    padding:10px 0;
+    &__inner {
+      .nav {
+        margin: 10px 20px 0 0;
+      }
+      .head01 {
+        margin: 0 0 0 15px;
+      }
+    }
+  }
+}

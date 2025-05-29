@@ -1,32 +1,62 @@
+@charset "UTF-8";
+
 .header {
   padding: 9px 0 11px;
   background: #fff;
 }
+
 .header__inner {
   max-width: 966px;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  padding: 0 50px;
 }
+
 .header__inner .nav {
-  margin: 11px 0 0 0;
+  margin: 11px 58px 0 0;
 }
+
 .header__inner .head01 {
   width: 120px;
+  margin: 0 0 0 55px;
 }
+
 .header__inner .head01,
 .header__inner .nav {
   align-self: flex-start;
   font-size: 0.875rem;
   color: #24292E;
 }
+
 .header__inner .head01__list,
 .header__inner .nav__list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 33px;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .header__inner .nav {
+    margin: 10px 20px 0 0;
+  }
+
+  .header__inner .head01 {
+    margin: 0 0 0 15px;
+  }
+}
+
+.footer {
+  padding: 102px 0 8px 0;
+  text-align: center;
+}
+
+.footer__copy {
+  font-size: 0.5rem;
 }
 
 .main__inner {
@@ -45,6 +75,7 @@
   max-width: 966px;
   margin: auto;
 }
+
 .sec__title {
   font-size: 2.2rem;
   font-weight: 500;
@@ -52,6 +83,7 @@
   width: fit-content;
   margin: auto;
 }
+
 .sec__title::before {
   position: absolute;
   content: "";
@@ -61,10 +93,12 @@
   left: 0;
   bottom: 0;
 }
+
 .sec__title--detail {
   text-align: left;
   width: auto;
 }
+
 .sec__title--detail::before {
   display: none;
 }
@@ -72,11 +106,13 @@
 .sec--detail {
   padding: 26px 30px 0;
 }
+
 .sec--detail__title {
   font-size: 2.2rem;
   font-weight: 500;
   position: static;
 }
+
 .sec--detail::before {
   display: none;
 }
@@ -84,6 +120,7 @@
 .content {
   margin: 6px auto 0;
 }
+
 .content__text {
   margin: 20px 0 0 0;
   font-size: 0.875rem;
@@ -95,30 +132,11 @@
   font-size: 0.875rem;
 }
 
-.footer {
-  padding: 102px 0 8px 0;
-  text-align: center;
-}
-.footer__copy {
-  font-size: 0.5rem;
-}
-
 @media (max-width: 767px) {
-  .header {
-    padding: 10px 15px;
-  }
-  .header__inner {
-    padding: 0;
-  }
-  .header__inner .nav {
-    margin: 10px 0 0 0;
-  }
-  .header__inner .head01 {
-    margin: 0 0 0 0;
-  }
   .main__inner {
     padding: 0 15px;
   }
+
   .mv__bg {
     height: 228px;
     background: url(../../../img/training01/detail/mv_sp.png) no-repeat center center/cover;

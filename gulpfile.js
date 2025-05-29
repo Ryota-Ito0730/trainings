@@ -28,6 +28,10 @@ import pug from "gulp-pug";
 import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass);
+// Sassコンパイル時にchasetが削除されないよう下記2点を追加
+import replace from "gulp-replace";
+import header from "gulp-header";
+
 
 // webpに変更せずに圧縮する場合は、下記を有効にします
 import imagemin from "gulp-imagemin";
@@ -44,9 +48,13 @@ import pathObj from "./gulpfilePathConfig.js";
  */
 const compileSass = () => {
   return src(pathObj.sass.src)
-    // コンパイルエラー発生時に自動的に止まらないように、
-    // "on("error", sass.logError)"を追加
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(sass({ outputStyle: "expanded" })
+    // エラー発生時に自動的に停止しないよう追加
+    .on("error", sass.logError))
+    // /*コメント*/が記載されていると@charset "UTF-8"が2つ記載されるのを防ぐ
+    .pipe(replace(/@charset "UTF-8";/g, ''))
+    // replaceで予め処理した上で@charset "UTF-8";を追加
+    .pipe(header('@charset "UTF-8";\n\n'))
     .pipe(dest(pathObj.sass.dist))
     .pipe(browserSync.stream());
 };

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .header {
   padding: 9px 0 11px;
   background: #fff;
@@ -27,6 +29,25 @@
   justify-content: flex-start;
   align-items: center;
   gap: 33px;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 10px 0;
+  }
+  .header__inner .nav {
+    margin: 10px 20px 0 0;
+  }
+  .header__inner .head01 {
+    margin: 0 0 0 15px;
+  }
+}
+.footer {
+  padding: 102px 0 8px 0;
+  text-align: center;
+}
+.footer__copy {
+  font-size: 0.5rem;
 }
 
 .mv__bg {
@@ -109,32 +130,7 @@
   font-size: 0.875rem;
 }
 
-.footer {
-  padding: 102px 0 8px 0;
-  text-align: center;
-}
-.footer__copy {
-  font-size: 0.5rem;
-}
-
-@media (max-width: 1280px) {
-  .header__inner .nav {
-    margin: clamp(10px, 0.859375vw, 11px) clamp(10px, 4.53125vw, 58px) 0 0;
-  }
-  .header__inner .head01 {
-    margin: 0 0 0 clamp(15px, 4.296875vw, 55px);
-  }
-}
 @media (max-width: 767px) {
-  .header {
-    padding: 10px 0;
-  }
-  .header__inner .nav {
-    margin: 10px 20px 0 0;
-  }
-  .header__inner .head01 {
-    margin: 0 0 0 15px;
-  }
   .mv__bg {
     background: url(../../img/training01/mv_sp.png) no-repeat center center/cover;
   }
