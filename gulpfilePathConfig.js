@@ -12,7 +12,11 @@ const pathObj = {
     dist : "./dist/assets/css/"
   },
   pug : {
-    src: ["./_src/*.pug","./_src/**/*.pug"],
+    src: [
+      "./_src/*.pug",
+      "./_src/**/*.pug",
+      "!./_src/**/inc/*.pug"// incフォルダをコンパイル対象から除外
+    ],
     dist : "./dist/"
   },
   img : {
