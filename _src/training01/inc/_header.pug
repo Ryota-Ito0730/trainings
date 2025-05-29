@@ -1,8 +1,14 @@
 header.header
   .header__inner
-    h1.head01
-      a.link.header__logo(href="#")
-        img(src="/assets/img/training01/logo.png", alt="")
+    //- トップページと下層ページでロゴ周りのタグの出し分け
+    if isPage === "top"
+      h1.head01
+        a.link.header__logo(href="#")
+          img(src="/assets/img/training01/logo.png", alt="")
+    else
+      .head01
+        a.link.header__logo(href="#")
+          img(src="/assets/img/training01/logo.png", alt="")
     nav.nav
       ul.nav__list
         li.nav__item
