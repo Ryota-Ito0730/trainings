@@ -1,13 +1,8 @@
 @charset "utf-8";
 
-// 各幅共通
-.visible-sp {display: none;}
-.visible-pc {display: block;}
-@media (max-width:767px){
-  .visible-sp {display: block;}
-  .visible-pc {display: none;}
-}
+
 // ヘッダー
+// あとで切り出し
 .header {
   padding:9px 0 11px;
   background: #fff;
@@ -16,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
+    padding: 0 50px;
     .nav {
-      margin: 11px 58px 0 0;
+      margin: 11px 0 0 0;
     }
     .head01 {
       width: 120px;
-      margin: 0 0 0 55px;
     }
     .head01,
     .nav{
@@ -37,11 +32,18 @@
     }
   }
 }
+.main {
+  &__inner{
+    max-width: 960px;
+    margin: auto;
+    padding: 0 50px;
+  }
+}
 // メインビジュアル
 .mv {
   &__bg {
-    height: 600px;
-    background: url(../../img/training01/mv.png) no-repeat center center / cover;
+    height: 568px;
+    background: url(../../../img/training01/detail/mv.png) no-repeat center center / cover;
   }
 }
 // セクション：About
@@ -52,10 +54,9 @@
   &__title {
     font-size: 2.2rem;
     font-weight: 500;
-    text-align: center;
     position: relative;
     width: fit-content;
-    margin: 0 auto 0;
+    margin: auto;
     &::before {
       position: absolute;
       content:"";
@@ -66,58 +67,40 @@
       bottom:0;
     }
   }
+  &__title--detail {
+    text-align: left;
+    width: auto;
+    &::before {
+      display: none;
+    }
+  }
+}
+.sec--detail {
+  padding: 26px 30px 0;
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    position: static;
+  }
+  &::before {
+    display: none;
+  }
 }
 .content{
-  max-width: 528px;
-  margin: 70px auto 0;
-  &__inner{
-    display: flex;
-    gap: 30px;
-  }
-}
-.content-img{
-  min-width: 100px;
-  width: 100px;
-  align-self: center;
-}
-.content-desc{
-  .head03{
-    font-size: 1.1rem;
-    line-height: 1;
-  }
-  .desc{
-    font-size: 0.875rem;
-    margin: 16px 0 0 0;
-    line-height: 1.55em;
-    letter-spacing: 0.3px;
-  }
-}
-// セクション：Bicycle
-.sec--bicycle {
-  padding: 94px 15px 0;
-}
-.content--bicycle{
-  max-width: 858px;
-  margin: 60px auto 0;
-  .content__inner--bicycle{
-    display: flex;
-    justify-content: space-between;
-    gap: 17px;
-  }
-}
-.media {
-  &__desc {
-    margin: 8px 0 0 0;
-    text-align: center;
-  }
-  &__title {
-    font-size: 1rem;
-  }
+  margin: 6px auto 0;
   &__text {
-    margin: 12px 0 0 0;
+    margin: 20px 0 0 0 ;
     font-size: 0.875rem;
   }
 }
+
+.link {
+  margin: 64px 0 0 0;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+// あとで切り出し
 .footer {
   padding: 102px 0 8px 0;
   text-align: center;
@@ -126,58 +109,29 @@
   }
 }                
 
-@media (max-width:1280px) {
-  // ヘッダー
+@media (max-width:767px) {
+  // ヘッダー 
   .header {
+    padding:10px 15px;
     &__inner {
+      padding: 0;
       .nav {
-        margin: clamp(10px, 0.859375vw, 11px) clamp(10px, 4.53125vw, 58px) 0 0;
+        margin: 10px 0 0 0;
       }
       .head01 {
-        margin: 0 0 0 clamp(15px, 4.296875vw, 55px);
+        margin: 0 0 0 0;
       }
     }
   }
-}
-
-@media (max-width:767px) {
-  // ヘッダー
-  .header {
-    padding:10px 0;
-    &__inner {
-      .nav {
-        margin: 10px 20px 0 0;
-      }
-      .head01 {
-        margin: 0 0 0 15px;
-      }
+  .main {
+    &__inner{
+      padding: 0 15px;
     }
   }
   .mv {
     &__bg {
-      background: url(../../img/training01/mv_sp.png) no-repeat center center / cover;
-    }
-  }
-  // セクション：About
-  .content{
-    margin: 60px 0 0 0;
-    &__inner{
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  .content-desc{
-    .desc{
-      line-height: 1.43em;
-    }
-  }
-  // セクション：Bicycle
-  .sec--bicycle {
-    padding: 107px 15px 0;
-  }
-  .content--bicycle{
-    .content__inner--bicycle{
-      gap: 30px;
+      height: 228px;
+      background: url(../../../img/training01/detail/mv_sp.png) no-repeat center center / cover;
     }
   }
 }

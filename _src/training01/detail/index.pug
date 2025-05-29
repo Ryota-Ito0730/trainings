@@ -9,50 +9,22 @@ html(lang="ja")
     link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap", rel="stylesheet")
     link(rel="stylesheet", href="/assets/css/reset.css")
     link(rel="stylesheet", href="/assets/css/base.css")
-    link(rel="stylesheet", href="/assets/css/training01/style.css")
+    link(rel="stylesheet", href="/assets/css/training01/detail/style.css")
   body 
     include ../inc/header.pug
     main.main 
       .main__inner
         .mv 
           .mv__bg
-        section.sec
-          h2.sec__title.head02 About
+        section.sec.sec--detail
+          h1.sec__title.sec__title--detail.head01 タイトルタイトル１
           .content
             .content__inner
-              .content-img 
-                img(src="/assets/img/training01/about_image.png", alt="KAKERU MIYAICHIのプロフィール画像。緑色の帽子とグレーのバーカー、黒の短パンを履き、スマートフォンを見ながら歩いています。")
-              .content-desc
-                h3.head03 KAKERU MIYAICHI
-                p.desc
-                  | テキストテキストテキストテキストテキストテキストテキスト
-                  br.visible-sp 
-                  | テキストテキストテキストテキストテキストテキストテキスト
-                  br.visible-sp 
-                  | テキストテキストテキストテキストテキストテキストテキスト
+              p.content__text テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１
+              p.content__text テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１
+              p.content__text テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１テキスト１
+        .link
+          a.link-item(href="/training01/") トップに戻る 
+    include ../inc/footer.pug
 
-        section.sec.sec--bicycle
-          h2.sec__title.head02 Bicycle
-          .content.content--bicycle
-            .content__inner.content__inner--bicycle
-              .media
-                .media__img
-                  img(src="/assets/img/training01/bicycle_item01.png", alt="自転車のサドル部分を中心に、夕焼けの中の街並みを背景にして撮影されている。")
-                .media__desc
-                  h3.media__title タイトルタイトル
-                  p.media__text テキストテキストテキスト
-              .media
-                .media__img
-                  img(src="/assets/img/training01/bicycle_item02.png", alt="自転車がレンガ調の壁に立てかけられた状態で撮影されている。")
-                .media__desc
-                  h3.media__title タイトルタイトル
-                  p.media__text テキストテキストテキスト
-              .media
-                .media__img
-                  img(src="/assets/img/training01/bicycle_item03.png", alt="自転車の後輪部分を車体横方向から撮影されている。")
-                .media__desc
-                  h3.media__title タイトルタイトル
-                  p.media__text テキストテキストテキスト
-    footer.footer
-      small.footer__copy &copy; 2020 Profile
 
