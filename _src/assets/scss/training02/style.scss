@@ -2,43 +2,44 @@
 
 @use "inc/header";
 @use "inc/footer";
-
 /*
 変数として用意する
 色
 文字サイズ
 文字の太さ
 */
-
-
 /* ====================
 PC/SP共通スタイル
 ==================== */
 // 各セクションの上下余白
 // 60px
-
 html {
   background: #F4F9FF;
 }
-
 .logo {
   width: 160px;
-  margin: 60px 0 0 0;
-}
+  font-size: 1px;
+  a {
+    display: inline-block;
+    line-height: 1px;
 
+  }
+}
 .sec { 
-  margin: 60px auto 0;
+  margin: 30px auto 0;
+  padding: 0 10px;
   &--index{
-    padding: 30px 0;
-    background: #fff;
+    padding: 30px 10px 0;
   }
   &__inner {
-    max-width: 680px;
+    max-width: 1000px;
     padding: 0 40px;// 各セクション共通の左右余白
     margin: auto;
+    &--index {
+      background: #fff;
+    }
   }
 }
-
 .font-title {
   font-size: 1.125rem; // 18px
   font-weight: 700;
@@ -49,7 +50,6 @@ html {
   font-weight: 400;
   line-height: 1.214;
 }
-
 .list{
   margin: 15px 0 4px 0;
   &__item {
@@ -59,16 +59,6 @@ html {
     }
   }
 }
-
-.flex {
-  display: flex;
-  &--detail{
-    gap: 60px;
-    justify-content: space-between;
-  }
-}
-
-
 /* ====================
 PC版スタイル
 ==================== */
@@ -84,14 +74,28 @@ PC版スタイル
     max-width: 1000px;
     margin: auto;
     height: 400px;
-    background: url(../../img/training02/mv.png) no-repeat center center/cover;
-    
+    background: url(../../img/training02/mv.png) no-repeat center center/cover;  
   }
 }
 // セクション DETAIL
 .content {
   padding: 15px 0 0 0;
+  &--index,
+  &--detail {
+    max-width: 600px;
+    margin: auto;
+    padding: 29px 0 30px 0;
+  }
+  &__inner {
+    &--detail {
+      display: flex;
+      gap: 60px;
+      justify-content: space-between;
+      padding: 17px 0 0 0;
+    }
+  }
   &__text {
+    padding: 0 10px 0 0;
   }
 }
 .content-left {
@@ -106,10 +110,8 @@ PC版スタイル
       text-align: left;
       line-height: 1.214;
       margin: 25px 0;
-      padding: 16px 0 20px;
+      padding: 11px 0 20px;
       display: block;
-      &__row{
-      }
       &__head {
         font-weight: 400;
         min-width: 68px;
@@ -119,7 +121,6 @@ PC版スタイル
         padding: 4px 34px 0 0;
       }
   }
-
   .link {
     display: inline-block;
     position: relative;
@@ -136,24 +137,9 @@ PC版スタイル
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ====================
 SP版スタイル
 ==================== */
-
-
 @media (max-width:767px) {
 
 }

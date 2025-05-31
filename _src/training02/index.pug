@@ -17,39 +17,35 @@ html(lang="ja")
         .mv 
           .mv__bg
         section.sec.sec--index
-          .sec__inner 
-            h2.title INDEX
-            //- ここをリストのみのファイルとして部分抜粋する
-            ul.list.font-text
-              li.list__item.list__item--first 1. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-              li.list__item 2. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-              li.list__item 3. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-              li.list__item 4. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-              li.list__item 5. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-
+          .sec__inner.sec__inner--index
+            .content.content--index
+              h2.font-title INDEX
+              //- ここをリストのみのファイルとして部分抜粋する
+              ul.list.font-text
+                li.list__item.list__item--first 1. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                li.list__item 2. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                li.list__item 3. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                li.list__item 4. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+                li.list__item 5. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
         section.sec
           .sec__inner 
-            h2.font-title DETAIL
-            .content.flex.flex--detail
-              .content-left
-                img(src="/assets/img/training02/detail.png", alt="フォトブック「タイトルタイトルタイトル」の表紙カバーのイメージ")
-              .content-right.font-text
-                h2.font-title タイトルタイトルタイトル
-                table.table.font-text
-                  tr.table__row 
-                    th.table__head  著者
-                    td.table__desc タイトルタイトルタイトル
-                  tr.table__row 
-                    th.table__head 出版社
-                    td.table__desc タイトルタイトルタイトル
-                  tr.table__row 
-                    th.table__head 発行年
-                    td.table__desc タイトルタイトルタイトル
-                p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                a.link(href="#") オンラインストアで見る
-                    
-
-
-
+            .content.content--detail
+              h2.font-title DETAIL
+              .content__inner.content__inner--detail
+                .content-left
+                  img(src="/assets/img/training02/detail.png", alt="フォトブック「タイトルタイトルタイトル」の表紙カバーのイメージ")
+                .content-right.font-text
+                  h2.font-title タイトルタイトルタイトル
+                  table.table.font-text
+                    tr.table__row 
+                      th.table__head  著者
+                      td.table__desc タイトルタイトルタイトル
+                    tr.table__row 
+                      th.table__head 出版社
+                      td.table__desc タイトルタイトルタイトル
+                    tr.table__row 
+                      th.table__head 発行年
+                      td.table__desc タイトルタイトルタイトル
+                  p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  a.link(href="#") オンラインストアで見る
     include inc/_footer.pug
-
