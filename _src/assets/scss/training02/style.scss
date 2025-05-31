@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// 色設定
+// 色設定、文字サイズ
 @use "setting/vars" as *;
 
 @use "inc/header";
@@ -43,12 +43,12 @@ html {
   }
 }
 .font-title {
-  font-size: 1.125rem; // 18px
+  font-size: size(large);
   font-weight: 700;
   line-height: 1.222;
 }
 .font-text {
-  font-size: 0.875rem;// 14px
+  font-size: size(medium);
   font-weight: 400;
   line-height: 1.214;
 }

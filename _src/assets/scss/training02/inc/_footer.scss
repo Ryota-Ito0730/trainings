@@ -1,3 +1,6 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
 .footer {
   padding: 75px 0 8px 0;
   &__inner {
@@ -6,6 +9,6 @@
     padding: 0 40px;
   }
   &__copy {
-    font-size: 0.625rem;
+    font-size: size(small);
   }
 }                

@@ -12,3 +12,25 @@ $colors:(
 @function color($name) {
   @return map.get($colors, $name);
 }
+
+$sizes:(
+  small:calc(10 * 0.0625),// 0.625rem = 10px
+  medium:calc(14 * 0.0625),// 0.875rem = 14px
+  base:calc(16 * 0.0625),// 1rem = 16px,
+  large:calc(18 * 0.0625),//1.125rem = 18px
+);
+
+@function size($name) {
+  @return map.get($sizes, $name) + rem;
+}
+
+$weight:(
+  small:400,
+  medium:500(14 * 0.0625),// 0.875rem = 14px
+  base:calc(16 * 0.0625),// 1rem = 16px,
+  large:calc(18 * 0.0625),//1.125rem = 18px
+);
+
+@function size($name) {
+  @return map.get($sizes, $name) + rem;
+}
