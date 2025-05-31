@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+@use "sass:map";
+// 文字色、背景色
+$colors:(
+  wht:#fff,
+  blk:#333,
+  glay:#DEDEDE,
+  bgblue:#F4F9FF,
+);
+
+@function color($name) {
+  @return map.get($colors, $name);
+}

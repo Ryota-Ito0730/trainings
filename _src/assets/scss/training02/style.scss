@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+// 色設定
+@use "setting/vars" as *;
+
 @use "inc/header";
 @use "inc/footer";
 /*
@@ -14,7 +17,7 @@ PC/SP共通スタイル
 // 各セクションの上下余白
 // 60px
 html {
-  background: #F4F9FF;
+  background: color(wht);
 }
 .logo {
   width: 160px;
@@ -22,7 +25,6 @@ html {
   a {
     display: inline-block;
     line-height: 1px;
-
   }
 }
 .sec { 
@@ -36,7 +38,7 @@ html {
     padding: 0 40px;// 各セクション共通の左右余白
     margin: auto;
     &--index {
-      background: #fff;
+      background: color(wht);
     }
   }
 }
@@ -103,8 +105,8 @@ PC版スタイル
 .content-right {
   width: calc(270 / 600) * 100%;// 計算式が欲しい
   .table {
-    border-top:1px solid #DEDEDE;
-    border-bottom:1px solid #DEDEDE;
+    border-top:1px solid color(glay);
+    border-bottom:1px solid color(glay);
     border-collapse: collapse;
     text-align: left;
     line-height: 1.214;
@@ -128,7 +130,7 @@ PC版スタイル
     &::before{
       position: absolute;
       content:"";
-      background: #333;
+      background: color(blk);
       height: 1px;
       width: 100%;
       left:0;
