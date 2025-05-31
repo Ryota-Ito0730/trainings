@@ -1,0 +1,55 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title training02
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/assets/css/reset.css")
+    link(rel="stylesheet", href="/assets/css/base.css")
+    link(rel="stylesheet", href="/assets/css/training02/style.css")
+  body 
+    include inc/_header.pug
+    main.main 
+      .main__inner
+        .mv 
+          .mv__bg
+        section.sec.sec--index
+          .sec__inner 
+            h2.title INDEX
+            //- ここをリストのみのファイルとして部分抜粋する
+            ul.list.font-text
+              li.list__item.list__item--first 1. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+              li.list__item 2. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+              li.list__item 3. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+              li.list__item 4. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+              li.list__item 5. タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+
+        section.sec
+          .sec__inner 
+            h2.font-title DETAIL
+            .content.flex.flex--detail
+              .content-left
+                img(src="/assets/img/training02/detail.png", alt="フォトブック「タイトルタイトルタイトル」の表紙カバーのイメージ")
+              .content-right.font-text
+                h2.font-title タイトルタイトルタイトル
+                table.table.font-text
+                  tr.table__row 
+                    th.table__head  著者
+                    td.table__desc タイトルタイトルタイトル
+                  tr.table__row 
+                    th.table__head 出版社
+                    td.table__desc タイトルタイトルタイトル
+                  tr.table__row 
+                    th.table__head 発行年
+                    td.table__desc タイトルタイトルタイトル
+                p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                a.link(href="#") オンラインストアで見る
+                    
+
+
+
+    include inc/_footer.pug
+

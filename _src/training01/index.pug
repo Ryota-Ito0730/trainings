@@ -11,7 +11,7 @@ html(lang="ja")
     link(rel="stylesheet", href="/assets/css/base.css")
     link(rel="stylesheet", href="/assets/css/training01/style.css")
   body 
-    - var isPage = "top";
+    - const isPage = "top";
     include inc/_header.pug
     main.main 
       .main__inner
@@ -20,7 +20,7 @@ html(lang="ja")
         section.sec
           h2.sec__title.head02 About
           .content
-            .content__inner
+            .content__inner 
               .content-img 
                 img(src="/assets/img/training01/about_image.png", alt="KAKERU MIYAICHIのプロフィール画像。緑色の帽子とグレーのバーカー、黒の短パンを履き、スマートフォンを見ながら歩いています。")
               .content-desc

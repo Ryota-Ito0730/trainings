@@ -1,0 +1,13 @@
+.header {
+  &__inner {
+    padding:0 10px;
+    max-width: 1020px;// SP版の左右余白(合計20px)を予め加算しておく
+    margin: auto;
+  }
+}
+
+@media (max-width:767px) {
+  .header {
+    padding:10px 0;
+  }
+}
