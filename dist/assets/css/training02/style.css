@@ -7,17 +7,13 @@
   margin: auto;
 }
 
-@media (max-width: 767px) {
-  .header {
-    padding: 60px 10px 15px;
-  }
-}
 .footer {
   padding: 75px 0 8px 0;
 }
 .footer__inner {
   max-width: 600px;
   margin: auto;
+  padding: 0 40px;
 }
 .footer__copy {
   font-size: 0.625rem;
@@ -93,11 +89,9 @@ PC版スタイル
 .mv {
   padding: 0 10px;
 }
-.mv__bg {
+.mv__inner {
   max-width: 1000px;
   margin: auto;
-  height: 400px;
-  background: url(../../img/training02/mv.png) no-repeat center center/cover;
 }
 
 .content {
@@ -162,3 +156,49 @@ PC版スタイル
 /* ====================
 SP版スタイル
 ==================== */
+@media (max-width: 767px) {
+  /* ====================
+  PC/SP共通スタイル
+  ==================== */
+  .sec {
+    padding: 0;
+  }
+  .sec--index {
+    padding: 30px 0 0;
+  }
+  .list {
+    margin: 16px 0 4px 0;
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+  .list__item {
+    margin: 28px 0 0 0;
+  }
+  .list__item--first {
+    margin: 0;
+  }
+  .content--index, .content--detail {
+    max-width: unset;
+  }
+  .content--index {
+    padding: 29px 0 34px 0;
+  }
+  .content__inner--detail {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .content__text {
+    padding: 0;
+  }
+  .content-left,
+  .content-right {
+    width: 100%;
+  }
+  .content-right .table__head {
+    min-width: 74px;
+    padding: 4px 0 0 0;
+  }
+  .content-right .table__desc {
+    padding: 4px 0 0 0;
+  }
+}

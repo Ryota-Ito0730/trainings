@@ -70,14 +70,12 @@ PC版スタイル
 // メインビジュアル
 .mv {
   padding: 0 10px;
-  &__bg {
+  &__inner {
     max-width: 1000px;
-    margin: auto;
-    height: 400px;
-    background: url(../../img/training02/mv.png) no-repeat center center/cover;  
+    margin: auto;    
   }
 }
-// セクション DETAIL
+// セクションINDEX DETAIL 共通
 .content {
   padding: 15px 0 0 0;
   &--index,
@@ -98,28 +96,29 @@ PC版スタイル
     padding: 0 10px 0 0;
   }
 }
+// セクション DETAIL
 .content-left {
   width: calc(270 / 600) * 100%;// 計算式が欲しい
 }
 .content-right {
   width: calc(270 / 600) * 100%;// 計算式が欲しい
   .table {
-      border-top:1px solid #DEDEDE;
-      border-bottom:1px solid #DEDEDE;
-      border-collapse: collapse;
-      text-align: left;
-      line-height: 1.214;
-      margin: 25px 0;
-      padding: 11px 0 20px;
-      display: block;
-      &__head {
-        font-weight: 400;
-        min-width: 68px;
-        padding: 4px 0 0 0;
-      }
-      &__desc {
-        padding: 4px 34px 0 0;
-      }
+    border-top:1px solid #DEDEDE;
+    border-bottom:1px solid #DEDEDE;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.214;
+    margin: 25px 0;
+    padding: 11px 0 20px;
+    display: block;
+    &__head {
+      font-weight: 400;
+      min-width: 68px;
+      padding: 4px 0 0 0;
+    }
+    &__desc {
+      padding: 4px 34px 0 0;
+    }
   }
   .link {
     display: inline-block;
@@ -141,5 +140,59 @@ PC版スタイル
 SP版スタイル
 ==================== */
 @media (max-width:767px) {
-
+  /* ====================
+  PC/SP共通スタイル
+  ==================== */
+  .sec { 
+    padding: 0;
+    &--index{
+      padding: 30px 0 0;
+    }
+  }
+  .list{
+    margin: 16px 0 4px 0;
+    text-indent: -1em;
+    padding-left: 1em;
+    &__item {
+      margin: 28px 0 0 0;
+      &--first {
+        margin: 0;
+      }
+    }
+  }
+  // セクションINDEX DETAIL 共通
+  .content {
+    &--index,
+    &--detail {
+      max-width: unset;
+    }
+    &--index{
+      // padding: 34px;
+      padding: 29px 0 34px 0;
+    }
+    &__inner {
+      &--detail {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
+    &__text {
+      padding: 0;
+    }
+  }
+  .content-left,
+  .content-right {
+    width: 100%;
+  }
+  .content-right {
+    .table {
+      &__head {
+        min-width: 74px;
+        padding: 4px 0 0 0;
+      }
+      &__desc {
+        padding: 4px 0 0 0;
+      }
+    }
+  }
 }
