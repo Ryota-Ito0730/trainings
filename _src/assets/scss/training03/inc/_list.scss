@@ -1,15 +1,23 @@
-.header {
-  &__inner {
-    padding: 60px 10px 15px;
-    max-width: 1020px;// SP版の左右余白(合計20px)を予め加算しておく
-    margin: auto;
+.list{
+  margin: 15px 0 4px 0;
+  &__item {
+    margin: 24px 0 0 0;
+    &--first {
+      margin: 0;
+    }
   }
 }
 
 @media (max-width:767px) {
-  // .header {
-  //   &__inner {
-  //     padding:60px 10px 15px;
-  //   }
-  // }
+  .list{
+    margin: 16px 0 4px 0;
+    text-indent: -1em;
+    padding-left: 1em;
+    &__item {
+      margin: 28px 0 0 0;
+      &--first {
+        margin: 0;
+      }
+    }
+  }
 }

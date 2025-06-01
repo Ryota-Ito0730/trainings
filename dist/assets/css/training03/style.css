@@ -19,6 +19,29 @@
   font-size: 0.625rem;
 }
 
+.list {
+  margin: 15px 0 4px 0;
+}
+.list__item {
+  margin: 24px 0 0 0;
+}
+.list__item--first {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .list {
+    margin: 16px 0 4px 0;
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+  .list__item {
+    margin: 28px 0 0 0;
+  }
+  .list__item--first {
+    margin: 0;
+  }
+}
 /* ====================
 PC/SP共通スタイル
 ==================== */
@@ -63,16 +86,6 @@ html {
   line-height: 1.214;
 }
 
-.list {
-  margin: 15px 0 4px 0;
-}
-.list__item {
-  margin: 24px 0 0 0;
-}
-.list__item--first {
-  margin: 0;
-}
-
 /* ====================
 PC版スタイル
 ==================== */
@@ -113,24 +126,6 @@ PC版スタイル
 .content-right {
   width: 45%;
 }
-.content-right .table {
-  border-top: 1px solid #DEDEDE;
-  border-bottom: 1px solid #DEDEDE;
-  border-collapse: collapse;
-  text-align: left;
-  line-height: 1.214;
-  margin: 25px 0;
-  padding: 11px 0 20px;
-  display: block;
-}
-.content-right .table__head {
-  font-weight: 400;
-  min-width: 68px;
-  padding: 4px 0 0 0;
-}
-.content-right .table__desc {
-  padding: 4px 34px 0 0;
-}
 .content-right .link {
   display: inline-block;
   position: relative;
@@ -160,17 +155,6 @@ SP版スタイル
   .sec--index {
     padding: 30px 0 0;
   }
-  .list {
-    margin: 16px 0 4px 0;
-    text-indent: -1em;
-    padding-left: 1em;
-  }
-  .list__item {
-    margin: 28px 0 0 0;
-  }
-  .list__item--first {
-    margin: 0;
-  }
   .content--index, .content--detail {
     max-width: unset;
   }
@@ -187,12 +171,5 @@ SP版スタイル
   .content-left,
   .content-right {
     width: 100%;
-  }
-  .content-right .table__head {
-    min-width: 74px;
-    padding: 4px 0 0 0;
-  }
-  .content-right .table__desc {
-    padding: 4px 0 0 0;
   }
 }

@@ -1,0 +1,27 @@
+//- 配列を改行させて定義する際は"-"の次の行から変数定義をするとエラーにならずに済む
+
+- 
+  const tableValues = [
+    {
+      author:"タイトルタイトルタイトル",
+      publisher:"タイトルタイトルタイトル",
+      year:"2021年1月1日",
+    },
+    //- データが複数に及ぶ場合を想定
+    //- {
+    //-   author:"hogehogeタイトル",
+    //-   publisher:"hogehogeタイトル",
+    //-   year:"2021年1月1日",
+    //- },
+  ];
+table.table.font-text
+  each tableValue in tableValues
+    tr.table__row 
+      th.table__head 著者
+      td.table__desc=tableValue.author
+    tr.table__row 
+      th.table__head 出版社
+      td.table__desc=tableValue.publisher
+    tr.table__row 
+      th.table__head 発行年
+      td.table__desc=tableValue.year

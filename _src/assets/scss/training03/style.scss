@@ -6,6 +6,10 @@
 @use "inc/header";
 @use "inc/footer";
 
+@use "inc/list";
+@use "inc/images";
+@use "inc/table";
+
 /* ====================
 PC/SP共通スタイル
 ==================== */
@@ -47,15 +51,7 @@ html {
   font-weight: weight(regular);
   line-height: 1.214;
 }
-.list{
-  margin: 15px 0 4px 0;
-  &__item {
-    margin: 24px 0 0 0;
-    &--first {
-      margin: 0;
-    }
-  }
-}
+
 /* ====================
 PC版スタイル
 ==================== */
@@ -99,24 +95,6 @@ PC版スタイル
 }
 .content-right {
   width: calc(270 / 600) * 100%;// 計算式が欲しい
-  .table {
-    border-top:1px solid color(glay);
-    border-bottom:1px solid color(glay);
-    border-collapse: collapse;
-    text-align: left;
-    line-height: 1.214;
-    margin: 25px 0;
-    padding: 11px 0 20px;
-    display: block;
-    &__head {
-      font-weight: weight(regular);
-      min-width: 68px;
-      padding: 4px 0 0 0;
-    }
-    &__desc {
-      padding: 4px 34px 0 0;
-    }
-  }
   .link {
     display: inline-block;
     position: relative;
@@ -146,17 +124,6 @@ SP版スタイル
       padding: 30px 0 0;
     }
   }
-  .list{
-    margin: 16px 0 4px 0;
-    text-indent: -1em;
-    padding-left: 1em;
-    &__item {
-      margin: 28px 0 0 0;
-      &--first {
-        margin: 0;
-      }
-    }
-  }
   // セクションINDEX DETAIL 共通
   .content {
     &--index,
@@ -182,14 +149,6 @@ SP版スタイル
     width: 100%;
   }
   .content-right {
-    .table {
-      &__head {
-        min-width: 74px;
-        padding: 4px 0 0 0;
-      }
-      &__desc {
-        padding: 4px 0 0 0;
-      }
-    }
+
   }
 }

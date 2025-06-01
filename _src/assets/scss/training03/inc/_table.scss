@@ -1,0 +1,30 @@
+.table {
+  border-top:1px solid color(glay);
+  border-bottom:1px solid color(glay);
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.214;
+  margin: 25px 0;
+  padding: 11px 0 20px;
+  display: block;
+  &__head {
+    font-weight: weight(regular);
+    min-width: 68px;
+    padding: 4px 0 0 0;
+  }
+  &__desc {
+    padding: 4px 34px 0 0;
+  }
+}
+
+@media (max-width:767px) {
+  .table {
+    &__head {
+      min-width: 74px;
+      padding: 4px 0 0 0;
+    }
+    &__desc {
+      padding: 4px 0 0 0;
+    }
+  }
+}
