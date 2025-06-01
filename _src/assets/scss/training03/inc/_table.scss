@@ -22,9 +22,10 @@
 
 @media (max-width:767px) {
   .table {
+    padding: 7px 0 0 0;
     &__head {
       min-width: 74px;
-      padding: 4px 0 0 0;
+      padding: 14px 0 0 0;
     }
     &__desc {
       padding: 4px 0 0 0;

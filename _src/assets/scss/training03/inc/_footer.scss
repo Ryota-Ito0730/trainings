@@ -13,3 +13,8 @@
     font-size: size(small);
   }
 }                
+@media (max-width:767px) {
+  .footer {
+    padding: 64px 0 8px 0;
+  }   
+}

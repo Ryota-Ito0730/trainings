@@ -139,17 +139,24 @@ PC版スタイル
 SP版スタイル
 ==================== */
 @media (max-width:767px) {
-  /* ====================
-  PC/SP共通スタイル
-  ==================== */
+  
   .sec { 
+    margin: 60px auto 0;
     padding: 0;
-    &--index{
-      padding: 30px 0 0;
+    &--detail {
+      margin: 0 auto;
     }
+    &__inner {
+      padding: 0 20px;// 各セクション共通の左右余白
+    }
+  }
+  // メインビジュアル
+  .mv {
+    padding: 0;
   }
   // セクションINDEX DETAIL 共通
   .content {
+    padding: 40px 20px;
     &--index,
     &--detail {
       max-width: unset;
@@ -157,11 +164,15 @@ SP版スタイル
     &--index{
       // padding: 34px;
       padding: 29px 0 34px 0;
+      &--bottom {
+        padding: 60px 0;
+      }
     }
     &__inner {
       &--detail {
+        padding: 14px 0 0 0;
         flex-direction: column;
-        gap: 25px;
+        gap: 27px;
       }
     }
     &__text {
@@ -172,7 +183,17 @@ SP版スタイル
   .content-right {
     width: 100%;
   }
+  // セクション DETAIL
+  .content-left {
+    width: 100%;
+  }
   .content-right {
-
+    width: 100%;
+    padding: 17px 0 0 0;
+    &__inner{
+      border-top: 1px solid color(blk);
+      border-left: unset;
+      padding: 40px 0 0 0;
+    }
   }
 }

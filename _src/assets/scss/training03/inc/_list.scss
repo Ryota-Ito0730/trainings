@@ -18,7 +18,8 @@
 
 @media (max-width:767px) {
   .list{
-    margin: 16px 0 4px 0;
+    margin: 35px 0 0 0;
+    padding: 30px 12px 36px calc(12px + 1em);
     &__item {
       margin: 28px 0 0 0;
       &--first {
