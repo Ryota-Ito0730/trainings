@@ -29,6 +29,9 @@ html {
 .sec { 
   margin: 60px auto 0;
   padding: 0 10px;
+  &--detail {
+    margin: 0 auto;
+  }
   &__inner {
     max-width: 1000px;
     padding: 0 40px;// 各セクション共通の左右余白
@@ -49,7 +52,6 @@ html {
   font-weight: weight(regular);
   line-height: 1.214;
 }
-
 /* ====================
 PC版スタイル
 ==================== */
@@ -68,52 +70,68 @@ PC版スタイル
 }
 // セクションINDEX DETAIL 共通
 .content {
-  &--index,
-  &--detail {
-    max-width: 800px;
-    margin: auto;
-  }
-  &__inner {
-    padding: 60px;
+  padding: 60px;
+  &--index{
+    &--top,
+    &--bottom{
+      max-width: 800px;
+      margin: auto;
+    }
     &--top {
       background: color(glay);
     }
     &--bottom {
       padding: 60px 0;
-      display: flex;
-      gap: 15px;
-      justify-content: flex-start;
     }
+  }
+  &--detail {
+    max-width: 800px;
+    margin: auto;
+    padding: 60px;
+    background: color(glay);
+    // &--top{}
+  }
+  &__inner {
+    // &--index {}
     &--detail {
       display: flex;
-      gap: 60px;
       justify-content: space-between;
       padding: 17px 0 0 0;
     }
   }
   &__text {
     padding: 0 10px 0 0;
+    margin: 28px 0 0 0;
+    &.first {
+        margin: 0 0 0 0;
+    }
   }
+  
 }
 // セクション DETAIL
 .content-left {
-  width: calc(270 / 600) * 100%;// 計算式が欲しい
+  width: 238px;// 計算式が欲しい
 }
 .content-right {
-  width: calc(270 / 600) * 100%;// 計算式が欲しい
-  .link {
-    display: inline-block;
-    position: relative;
-    padding: 0 0 4px 0;
-    margin: 32px 0 0 0;
-    &::before{
-      position: absolute;
-      content:"";
-      background: color(blk);
-      height: 1px;
-      width: 100%;
-      left:0;
-      bottom:0;
+  width: calc(100% - 238px);// 計算式が欲しい
+  padding: 17px 0 0 0;
+  &__inner{
+    border-left: 1px solid color(blk);
+    padding: 0 0 0 40px;
+    .link {
+      display: inline-block;
+      position: relative;
+      padding: 0 0 4px 0;
+      margin: 28px 0 0 0;
+      &::before{
+        position: absolute;
+        content:"";
+        background: color(blk);
+        height: 1px;
+        width: 100%;
+        left:0;
+        bottom:0;
+      }
     }
   }
 }

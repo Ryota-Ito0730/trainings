@@ -12,21 +12,22 @@ html(lang="ja")
             img.mv__img(src="/assets/img/training03/mv.png", alt="PHOTO BOOKページのイメージ画像。建物の屋根と青空が強調されて撮影されている。")
         section.sec.sec--index
           .sec__inner.sec__inner--index
-            .content.content--index
-              .content__inner.content__inner--top
-                h2.font-title INDEX
+            .content.content--index--top
+              h2.font-title INDEX
+              .content__inner.content__inner--index
                 include inc/_list.pug
-              .content__inner.content__inner--bottom
-                include inc/_images.pug
-        section.sec
-          .sec__inner 
+            .content.content--index--bottom
+              include inc/_images.pug
+        section.sec.sec--detail
+          .sec__inner.sec__inner--detail
             .content.content--detail
               h2.font-title DETAIL
               .content__inner.content__inner--detail
                 .content-left
                   include inc/_table.pug          
                 .content-right.font-text
-                  p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                  p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                  a.link(href="#") オンラインストアで見る
+                  .content-right__inner
+                    p.content__text.first テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    a.link(href="#") オンラインストアで見る
     include inc/_footer.pug
