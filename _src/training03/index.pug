@@ -1,0 +1,48 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title training03
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/assets/css/reset.css")
+    link(rel="stylesheet", href="/assets/css/base.css")
+    link(rel="stylesheet", href="/assets/css/training03/style.css")
+  body 
+    include inc/_header.pug
+    main.main 
+      .main__inner
+        .mv 
+          .mv__inner
+            img.mv__img(src="/assets/img/training03/mv.png", alt="PHOTO BOOKページのイメージ画像。建物の屋根と青空が強調されて撮影されている。")
+        section.sec.sec--index
+          .sec__inner.sec__inner--index
+            .content.content--index
+              h2.font-title INDEX
+              include inc/_list.pug
+              include inc/_images.pug
+
+        section.sec
+          .sec__inner 
+            .content.content--detail
+              h2.font-title DETAIL
+              .content__inner.content__inner--detail
+                .content-left
+                  table.table.font-text
+                    tr.table__row 
+                      th.table__head  著者
+                      td.table__desc タイトルタイトルタイトル
+                    tr.table__row 
+                      th.table__head 出版社
+                      td.table__desc タイトルタイトルタイトル
+                    tr.table__row 
+                      th.table__head 発行年
+                      td.table__desc 2021年1月1日
+                
+                .content-right.font-text
+                  p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  p.content__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  a.link(href="#") オンラインストアで見る
+    include inc/_footer.pug
