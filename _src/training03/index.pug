@@ -4,6 +4,7 @@ html(lang="ja")
   -const directoryPath = "training03";
   include inc/_head.pug
   body 
+    include inc/_header.pug
     main.main 
       .main__inner
         .mv 
@@ -12,9 +13,11 @@ html(lang="ja")
         section.sec.sec--index
           .sec__inner.sec__inner--index
             .content.content--index
-              h2.font-title INDEX
-              include inc/_list.pug
-              include inc/_images.pug
+              .content__inner.content__inner--top
+                h2.font-title INDEX
+                include inc/_list.pug
+              .content__inner.content__inner--bottom
+                include inc/_images.pug
         section.sec
           .sec__inner 
             .content.content--detail

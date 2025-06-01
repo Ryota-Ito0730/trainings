@@ -1,3 +1,6 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
 .header {
   &__inner {
     padding: 60px 10px 15px;
