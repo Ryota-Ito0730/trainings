@@ -24,6 +24,9 @@ const browserSyncStart = (done) => {
 // Pugのコンパイル用プラグイン
 import pug from "gulp-pug";
 
+// Pugのコンパイル後、phpファイルを生成する(拡張子変更)
+import rename from "gulp-rename";
+
 // SassをDartSassでコンパイル
 import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
@@ -42,9 +45,10 @@ import mozjpeg from "imagemin-mozjpeg";
 // import webp from "gulp-webp";
 
 // 各タスクで指定するパスを読み込み
-import pathObj from "./gulpfilePathConfig.js";
+import pathObj from "./gulp/filePathConfig.js";
 
-/* Sass(SCSS)をコンパイルするタスク
+/** 
+ * Sass(SCSS)をコンパイルするタスク
  */
 const compileSass = () => {
   return src(pathObj.sass.src)
@@ -59,14 +63,33 @@ const compileSass = () => {
     .pipe(browserSync.stream());
 };
 
+
 /**
  * Pugをコンパイルするタスク
  */
-const compilePug = () => {
-  return src(pathObj.pug.src)
-    .pipe(pug({ pretty: true }))
+// 独自ルールに基づきpugに記載した内容からHTMLとPHPファイルを同時生成する際、
+// PHP側はWordPressのテンプレートタグやループ処理に置換します
+import {htmlReplaceRules, phpReplaceRules} from "./gulp/replaceRules.js";
+
+// 独自ルールによる置換処理(HTML)
+const compilePugToHtml = () => {
+  let stream = src(pathObj.pug.src).pipe(pug({ pretty: true })); 
+  htmlReplaceRules.forEach(rule => {
+    stream = stream.pipe(replace(rule.pattern, rule.replacement));
+  });
+  return stream.pipe(dest(pathObj.pug.dist));
+};
+// 独自ルールによる置換処理(PHP)
+const compilePugToPHP = () => {
+  let stream = src(pathObj.pug.src).pipe(pug({ pretty: true }));
+  phpReplaceRules.forEach(rule => {
+    stream = stream.pipe(replace(rule.pattern, rule.replacement));
+  });
+  return stream
+    .pipe(rename({ extname: ".php" }))// PHP側は明示的に拡張子をphpに変更する
     .pipe(dest(pathObj.pug.dist))
 };
+
 
 /**
  * 画像を圧縮します
@@ -92,7 +115,8 @@ const convertImage = () => {
  */
 const watchFiles = () => {
   watch(pathObj.sass.src, compileSass);
-  watch(pathObj.pug.src, series(compilePug,browserSyncReload));
+  watch(pathObj.pug.src, series(compilePugToHtml,browserSyncReload));
+  watch(pathObj.pug.src, series(compilePugToPHP,browserSyncReload));
   watch(pathObj.img.src, series(convertImage,browserSyncReload));
 };
 

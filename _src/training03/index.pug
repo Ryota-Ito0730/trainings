@@ -13,7 +13,7 @@ html(lang="ja")
         section.sec.sec--index
           .sec__inner.sec__inner--index
             .content.content--index--top
-              h2.font-title INDEX
+              h2.font-title :wpTitle(INDEX)
               .content__inner.content__inner--index
                 include inc/_list.pug
             .content.content--index--bottom
@@ -21,7 +21,7 @@ html(lang="ja")
         section.sec.sec--detail
           .sec__inner.sec__inner--detail
             .content.content--detail
-              h2.font-title DETAIL
+              h2.font-title :wpTitle(DETAIL)
               .content__inner.content__inner--detail
                 .content-left
                   include inc/_table.pug          

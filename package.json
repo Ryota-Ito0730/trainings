@@ -1,5 +1,5 @@
 {
-  "name": "gulp_lesson",
+  "name": "coding_training",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
@@ -8,6 +8,7 @@
     "gulp-header": "^2.0.9",
     "gulp-imagemin": "^9.1.0",
     "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^6.0.0",
     "gulp-webp": "^5.0.0",
