@@ -14,8 +14,9 @@ html(lang="ja")
             .content
               h1.font-title :wpTitle(Recipe Diary)
               .content__inner
-                p 日々の料理レシピをまとめています。<br>和食や洋食、中華、お菓子までいろいろな料理レシピをアップしていますので、<br>みなさんの献立にお役立てくださいね！
+                p.font-text.content__text 日々の料理レシピをまとめています。<br>和食や洋食、中華、お菓子までいろいろな料理レシピをアップしていますので、<br>みなさんの献立にお役立てくださいね！
             .content
               include inc/_images.pug
-              a.link(href="#") レシピ一覧を見る
+              .link-wrapper
+                a.link.link--cta.hover(href="#") レシピ一覧を見る
     include inc/_footer.pug

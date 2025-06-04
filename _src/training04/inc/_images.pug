@@ -5,9 +5,8 @@
     "/assets/img/training04/image01.png",
     "/assets/img/training04/image02.png",
     "/assets/img/training04/image03.png",
-    "/assets/img/training04/image04.png",
   ];
 .images
   each imagePath in imagePaths
     .images__item
-      img(src=imagePath, alt="")
+      img.images__img(src=imagePath, alt="")
