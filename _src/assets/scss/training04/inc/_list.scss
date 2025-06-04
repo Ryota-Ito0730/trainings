@@ -1,0 +1,30 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+.list{
+  margin: 35px 0 0 0;
+  padding: 30px calc(20% - 1em) 32px calc(20% + 1em);
+  border:1px solid color(blk);
+  text-indent: -1em;
+  font-size: size(medium);
+  line-height: 1.214;
+  &__item {
+    margin: 24px 0 0 0;
+    &--first {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .list{
+    margin: 35px 0 0 0;
+    padding: 30px 12px 36px calc(12px + 1em);
+    &__item {
+      margin: 28px 0 0 0;
+      &--first {
+        margin: 0;
+      }
+    }
+  }
+}

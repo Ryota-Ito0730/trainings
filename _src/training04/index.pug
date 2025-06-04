@@ -1,0 +1,21 @@
+doctype html
+html(lang="ja")
+  -const headTitle = "training04";
+  -const directoryPath = "training04";
+  include inc/_head.pug
+  body 
+    main.main 
+      .main__inner
+        .mv 
+          .mv__inner
+            img.mv__img(src="/assets/img/training04/mv.png", alt="Recipe Diaryページのイメージ画像。大皿にゆで卵やぶどう、ハム、イチジク、チーズ、アーモンド等の食材が盛りつけられている。")
+        section.sec
+          .sec__inner
+            .content
+              h1.font-title :wpTitle(Recipe Diary)
+              .content__inner
+                p 日々の料理レシピをまとめています。<br>和食や洋食、中華、お菓子までいろいろな料理レシピをアップしていますので、<br>みなさんの献立にお役立てくださいね！
+            .content
+              include inc/_images.pug
+              a.link(href="#") レシピ一覧を見る
+    include inc/_footer.pug

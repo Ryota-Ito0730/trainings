@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@use "sass:map";
+// 文字色、背景色
+$colors:(
+  wht:#fff,
+  blk:#333,
+  glay:#F5F5F5,
+  bgblue:#F4F9FF,
+);
+
+@function color($name) {
+  @return map.get($colors, $name);
+}
+
+// 文字サイズ
+$sizes:(
+  small:calc(10 * 0.0625),  // 0.625rem = 10px
+  medium:calc(14 * 0.0625), // 0.875rem = 14px
+  base:calc(16 * 0.0625),   // 1rem = 16px,
+  large:calc(18 * 0.0625),  //1.125rem = 18px
+);
+
+@function size($name) {
+  @return map.get($sizes, $name) + rem;
+}
+
+// 文字の太さ
+$weight:(
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  // black: 900 // 将来的に使うかも
+);
+
+@function weight($name) {
+  @return map.get($weight, $name);
+}

@@ -1,0 +1,20 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+.footer {
+  padding: 68px 0 8px 0;
+  &__inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 40px;
+    text-align: center;
+  }
+  &__copy {
+    font-size: size(small);
+  }
+}                
+@media (max-width:767px) {
+  .footer {
+    padding: 64px 0 8px 0;
+  }   
+}

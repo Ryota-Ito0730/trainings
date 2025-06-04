@@ -1,0 +1,34 @@
+// 色設定、文字サイズ
+@use "../setting/vars" as *;
+
+.table {
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.214;
+  display: block;
+  padding: 3px 0 0 0;
+  &__head {
+    display: block;
+    width: 100%;
+    font-weight: weight(bold);
+    padding: 14px 0 0 0;
+  }
+  &__desc {
+    display: block;
+    width: 100%;
+    padding: 4px 34px 0 0;
+  }
+}
+
+@media (max-width:767px) {
+  .table {
+    padding: 7px 0 0 0;
+    &__head {
+      min-width: 74px;
+      padding: 14px 0 0 0;
+    }
+    &__desc {
+      padding: 4px 0 0 0;
+    }
+  }
+}

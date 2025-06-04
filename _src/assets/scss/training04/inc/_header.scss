@@ -1,0 +1,18 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+.header {
+  &__inner {
+    padding: 60px 10px 15px;
+    max-width: 1020px;// SP版の左右余白(合計20px)を予め加算しておく
+    margin: auto;
+  }
+}
+
+@media (max-width:767px) {
+  // .header {
+  //   &__inner {
+  //     padding:60px 10px 15px;
+  //   }
+  // }
+}

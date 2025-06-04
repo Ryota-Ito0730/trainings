@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>training04</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/training04/style.css">
+  </head>
+  <body> 
+    <main class="main"> 
+      <div class="main__inner">
+        <div class="mv"> 
+          <div class="mv__inner"><img class="mv__img" src="/assets/img/training04/mv.png" alt="Recipe Diaryページのイメージ画像。大皿にゆで卵やぶどう、ハム、イチジク、チーズ、アーモンド等の食材が盛りつけられている。"></div>
+        </div>
+        <section class="sec">
+          <div class="sec__inner">
+            <div class="content">
+              <h1 class="font-title"><?php the_title(); ?></h1>
+              <div class="content__inner">
+                <p>日々の料理レシピをまとめています。<br>和食や洋食、中華、お菓子までいろいろな料理レシピをアップしていますので、<br>みなさんの献立にお役立てくださいね！</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="images">
+                <div class="images__item"><img src="/assets/img/training04/image01.png" alt=""></div>
+                <div class="images__item"><img src="/assets/img/training04/image02.png" alt=""></div>
+                <div class="images__item"><img src="/assets/img/training04/image03.png" alt=""></div>
+                <div class="images__item"><img src="/assets/img/training04/image04.png" alt=""></div>
+              </div><a class="link" href="#">レシピ一覧を見る</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="sns-links"><a class="link" href="#">Instagram</a><a class="link" href="#">Twitter</a><a class="link" href="#">FacebookInstagram</a></div><small class="footer__copy">&copy; 2021 Recipe Diary</small>
+      </div>
+    </footer>
+  </body>
+</html>

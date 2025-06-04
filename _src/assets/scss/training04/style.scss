@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+@use "inc/header";
+@use "inc/footer";
+
+@use "inc/list";
+@use "inc/images";
+@use "inc/table";
+
+/* ====================
+PC/SP共通スタイル
+==================== */
+// 各セクションの上下余白
+// 60px
+html {
+  background: color(wht);
+}
+.logo {
+  width: 180px;
+  font-size: 1px;
+  a {
+    display: inline-block;
+    line-height: 1px;
+  }
+}
+.sec { 
+  margin: 60px auto 0;
+  padding: 0 10px;
+  &--detail {
+    margin: 0 auto;
+  }
+  &__inner {
+    max-width: 1000px;
+    padding: 0 40px;// 各セクション共通の左右余白
+    margin: auto;
+    &--index {
+      background: color(wht);
+    }
+  }
+}
+.font-title {
+  font-size: size(large);
+  font-weight: weight(bold);
+  line-height: 1.222;
+  text-align: center;
+}
+.font-text {
+  font-size: size(medium);
+  font-weight: weight(regular);
+  line-height: 1.214;
+}
+/* ====================
+PC版スタイル
+==================== */
+.main {
+  &__inner {
+    margin: auto;
+  }
+}
+// メインビジュアル
+.mv {
+  padding: 0 10px;
+  &__inner {
+    max-width: 1000px;
+    margin: auto;    
+  }
+}
+// セクションINDEX DETAIL 共通
+.content {
+  padding: 60px;
+  &--index{
+    &--top,
+    &--bottom{
+      max-width: 800px;
+      margin: auto;
+    }
+    &--top {
+      background: color(glay);
+    }
+    &--bottom {
+      padding: 60px 0;
+    }
+  }
+  &--detail {
+    max-width: 800px;
+    margin: auto;
+    padding: 60px;
+    background: color(glay);
+    // &--top{}
+  }
+  &__inner {
+    // &--index {}
+    &--detail {
+      display: flex;
+      justify-content: space-between;
+      padding: 17px 0 0 0;
+    }
+  }
+  &__text {
+    padding: 0 10px 0 0;
+    margin: 28px 0 0 0;
+    &.first {
+        margin: 0 0 0 0;
+    }
+  }
+  
+}
+// セクション DETAIL
+.content-left {
+  width: 238px;// 計算式が欲しい
+}
+.content-right {
+  width: calc(100% - 238px);// 計算式が欲しい
+  padding: 17px 0 0 0;
+  &__inner{
+    border-left: 1px solid color(blk);
+    padding: 0 0 0 40px;
+    .link {
+      display: inline-block;
+      position: relative;
+      padding: 0 0 4px 0;
+      margin: 28px 0 0 0;
+      &::before{
+        position: absolute;
+        content:"";
+        background: color(blk);
+        height: 1px;
+        width: 100%;
+        left:0;
+        bottom:0;
+      }
+    }
+  }
+}
+/* ====================
+SP版スタイル
+==================== */
+@media (max-width:767px) {
+  
+  .sec { 
+    margin: 60px auto 0;
+    padding: 0;
+    &--detail {
+      margin: 0 auto;
+    }
+    &__inner {
+      padding: 0 20px;// 各セクション共通の左右余白
+    }
+  }
+  // メインビジュアル
+  .mv {
+    padding: 0;
+  }
+  // セクションINDEX DETAIL 共通
+  .content {
+    padding: 40px 20px;
+    &--index,
+    &--detail {
+      max-width: unset;
+    }
+    &--index{
+      // padding: 34px;
+      padding: 29px 0 34px 0;
+      &--bottom {
+        padding: 60px 0;
+      }
+    }
+    &__inner {
+      &--detail {
+        padding: 14px 0 0 0;
+        flex-direction: column;
+        gap: 27px;
+      }
+    }
+    &__text {
+      padding: 0;
+    }
+  }
+  .content-left,
+  .content-right {
+    width: 100%;
+  }
+  // セクション DETAIL
+  .content-left {
+    width: 100%;
+  }
+  .content-right {
+    width: 100%;
+    padding: 17px 0 0 0;
+    &__inner{
+      border-top: 1px solid color(blk);
+      border-left: unset;
+      padding: 40px 0 0 0;
+    }
+  }
+}
