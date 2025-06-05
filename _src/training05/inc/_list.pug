@@ -1,0 +1,15 @@
+//- 配列を改行させて定義する際は"-"の次の行から変数定義をするとエラーにならずに済む
+- 
+  const listValues = [
+    "1. タイトルタイトルタイトルタイトルタイトルタイトルタイトル",
+    "2. タイトルタイトルタイトルタイトルタイトルタイトルタイトル",
+    "3. タイトルタイトルタイトルタイトルタイトルタイトルタイトル",
+    "4. タイトルタイトルタイトルタイトルタイトルタイトルタイトル",
+    "5. タイトルタイトルタイトルタイトルタイトルタイトルタイトル"
+  ];
+ul.list
+  each listValue, index in listValues
+    if index == 0
+      li.list__item.list__item--first= listValue
+    else
+      li.list__item= listValue

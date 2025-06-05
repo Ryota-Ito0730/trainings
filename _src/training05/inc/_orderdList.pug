@@ -1,0 +1,12 @@
+//- 配列を改行させて定義する際は"-"の次の行から変数定義をするとエラーにならずに済む
+- 
+  const howtoValues = [
+    "テキストテキストテキストテキスト",
+    "テキストテキストテキストテキスト",
+    "テキストテキストテキストテキスト",
+    "テキストテキストテキストテキスト",
+    "テキストテキストテキストテキスト",
+  ];
+ol.orderd-list
+  each howtoValue in howtoValues
+    li.orderd-list__item= howtoValue

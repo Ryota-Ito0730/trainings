@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+
+.footer {
+  padding: 40px 0 8px 0;
+}
+.footer__inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 40px;
+  text-align: center;
+}
+.footer__copy {
+  font-size: 0.75rem;
+  margin: 18px 0 0 0;
+  display: inline-block;
+}
+
+@media (max-width: 834px) {
+  .footer {
+    padding: 60px 0 8px 0;
+  }
+}
+.images {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.images__item {
+  width: 33.3333333333%;
+}
+.images__img {
+  object-fit: cover;
+  height: 500px;
+}
+
+@media (max-width: 834px) {
+  .images__item {
+    width: 100%;
+  }
+  .images__img {
+    width: 100%;
+  }
+}
+/* ====================
+PC/SP共通スタイル
+==================== */
+html {
+  background: #fff;
+}
+
+.sec {
+  margin: 21px auto 0;
+}
+
+.font-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.156;
+  text-align: center;
+}
+
+.font-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ====================
+PC版スタイル
+==================== */
+.main__inner {
+  margin: auto;
+}
+
+.mv__inner {
+  margin: auto;
+}
+
+.recipe-img {
+  width: 50%;
+}
+.recipe-img img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.content {
+  padding: 60px 0;
+}
+.content__text {
+  padding: 0 10px 0 0;
+  margin: 31px 0 0 0;
+}
+
+.link-wrapper {
+  text-align: center;
+  margin: 60px 0 0 0;
+}
+
+.hover {
+  background: #fff;
+}
+.hover:hover, .hover:focus-visible {
+  background: #2B2A27;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: auto;
+}
+
+.link {
+  display: inline-block;
+}
+.link--cta {
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 232px;
+  padding: 15px 16px 12px;
+  border: 1px solid #2B2A27;
+}
+.link--footer {
+  font-size: 0.75rem;
+  line-height: 1.167;
+  border-bottom: 1px solid #2B2A27;
+}
+
+/* ====================
+SP版スタイル
+==================== */
+@media (max-width: 834px) {
+  .sec {
+    margin: 40px auto 0;
+  }
+  .content {
+    padding: 40px 0;
+  }
+  .content__text {
+    padding: 0;
+    margin: 21px 0 0 0;
+  }
+}
