@@ -39,18 +39,20 @@ PC版スタイル
 .mv {
   &__inner {
     margin: auto;
+    display: flex;
   }
-
 }
 .recipe-img{
   width: 50%;
   img {
-    // height: 100vh;
+    height: 700px;
     object-fit: cover;
-    object-position: center top;
+    object-position: top inherit;
   }
 }
 .recipe-desc {
+  width: 50%;
+  padding: 40px 60px 0;
 	&__name {
 	}
 	&__lead {

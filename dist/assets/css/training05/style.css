@@ -76,16 +76,22 @@ PC版スタイル
 
 .mv__inner {
   margin: auto;
+  display: flex;
 }
 
 .recipe-img {
   width: 50%;
 }
 .recipe-img img {
+  height: 700px;
   object-fit: cover;
-  object-position: center top;
+  object-position: top inherit;
 }
 
+.recipe-desc {
+  width: 50%;
+  padding: 40px 60px 0;
+}
 .content {
   padding: 60px 0;
 }
