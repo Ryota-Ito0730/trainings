@@ -1,0 +1,23 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+.desc-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 19px 0 0 0;
+  .desc-list__dd,
+  .desc-list__dt {
+    border-bottom: 1px dotted color(glay);
+    margin: 0 0 5px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .desc-list__dd {
+    width: 70%;
+  }
+  .desc-list__dt {
+    width: 30%;
+    text-align: right;
+  }
+}

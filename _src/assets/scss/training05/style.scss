@@ -3,8 +3,11 @@
 // 色設定、文字サイズ
 @use "setting/vars" as *;
 
-@use "inc/footer";
+// 各コンポーネントのスタイル
+@use "inc/descList";
+@use "inc/orderdList";
 @use "inc/images";
+@use "inc/footer";
 
 /* ====================
 PC/SP共通スタイル
@@ -47,40 +50,38 @@ PC版スタイル
   img {
     height: 700px;
     object-fit: cover;
-    object-position: top inherit;
+    object-position: top;
   }
 }
 .recipe-desc {
   width: 50%;
   padding: 40px 60px 0;
 	&__name {
+    h1 {
+      font-size: size(large);
+      line-height: 1.714;
+    }
 	}
 	&__lead {
+    margin: 20px 0 0 0;
+    p{
+      font-size: size(base);
+      line-height: 1.5;
+    }
 	}
-	&__list-wrapper {
-		&__list-title {
-		}
-	}
-	&__howto-wrapper {
-		&__list-title {
-		}
-	}
-}
-// pugと同様に別scssファイルとして切り出す
-.desc-list {
-  .desc-list__dd {
+	&__list-wrapper,
+  &__howto-wrapper {
+    margin: 40px 0 0 0;
   }
-  .desc-list__dt {
-  }
-}
-// pugと同様に別scssファイルとして切り出す
-.orderd-list {
-  .orderd-list__item {
+  &__list-title {
+      font-size: size(slarge);
+      line-height: 1.15;
+      border-bottom: 1px solid color(glay);
+      padding: 0 0 4px 0;
   }
 }
-
 .content {
-  padding: 60px 0;
+  padding: 40px 0;
   &__text {
     padding: 0 10px 0 0;
     margin: 31px 0 0 0;
@@ -88,7 +89,6 @@ PC版スタイル
 }
 .link-wrapper {
   text-align: center;
-  margin: 60px 0 0 0;
 }
 // マウスポインタのホバーとタブフォーカス
 .hover {
@@ -124,11 +124,27 @@ PC版スタイル
 SP版スタイル
 ==================== */
 @media (max-width:834px) {
+  // メインビジュアル
+  .mv {
+    &__inner {
+      flex-direction: column;
+    }
+  }
+  .recipe-img{
+    width: 100%;
+    img {
+      height: auto;
+    }
+  }
+  .recipe-desc {
+    width: 100%;
+    padding: 40px 18px 0;
+  }
   .sec { 
     margin: 40px auto 0;
   }
   .content {
-    padding: 40px 0;
+    padding: 17px 0 40px;
     &__text {
       padding: 0;
       margin: 21px 0 0 0;

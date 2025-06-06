@@ -5,7 +5,7 @@
 $colors:(
   wht:#fff,
   blk:#2B2A27,
-  glay:#F5F5F5,
+  glay:#ccc,
   bgblue:#F4F9FF,
 );
 
@@ -20,7 +20,9 @@ $sizes:(
 
   medium:calc(14 * 0.0625), // 0.875rem = 14px
   base:calc(16 * 0.0625),   // 1rem = 16px,
-  large:calc(18 * 0.0625),  //1.125rem = 18px
+  
+  slarge:calc(20 * 0.0625),  //1.125rem = 18px
+  large:calc(28 * 0.0625),  //1.125rem = 18px
   xlarge:calc(32 * 0.0625),  //2rem = 32px
 );
 

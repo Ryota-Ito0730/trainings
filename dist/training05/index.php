@@ -25,7 +25,7 @@
                 <p>たっぷりのひよこ豆とレンズ豆にアボガドとトマトを添えて、少しライムを絞ったらおいしいタコスのできあがりです。</p>
               </div>
               <div class="recipe-desc__list-wrapper">
-                <h2 class="recipe-desc__list-title"></h2>
+                <h2 class="recipe-desc__list-title">材料（2人分）</h2>
                 <dl class="desc-list">
                   <dd class="desc-list__dd">テキストテキスト</dd>
                   <dt class="desc-list__dt">1個</dt>
@@ -40,7 +40,7 @@
                 </dl>
               </div>
               <div class="recipe-desc__howto-wrapper">
-                <h2 class="recipe-desc__list-title"></h2>
+                <h2 class="recipe-desc__list-title">作り方</h2>
                 <ol class="orderd-list">
                   <li class="orderd-list__item">テキストテキストテキストテキスト</li>
                   <li class="orderd-list__item">テキストテキストテキストテキスト</li>
