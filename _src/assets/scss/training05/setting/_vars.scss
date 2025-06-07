@@ -1,5 +1,6 @@
 @charset "utf-8";
 @use "sass:map";
+@use "sass:math";
 
 // ==================================================
 // プロダクトでよく使用するカラーコードをキーワード指定で返却します。
@@ -38,13 +39,25 @@ $colors:(
 }
 
 // ==================================================
-// line-height
+// line-heightを計算し、返却します。
+// $digit : 小数点以下の有効桁数を指定します。
+//
+// 例)
+// font-size:28px;に対してline-height:48px;が指定されている場合
+// [scss入力時]
+//  p { line-height: lh(28, 48); }
+// [コンパイル後]
+//  p { line-height: 1.71; }
+
 // ==================================================
-
-
-
-
-
+@function lh($fzVal,$lhVal) {
+  $digit : 2; // 桁数指定
+  $num: math.pow(10, $digit);
+  $tmp : calc($lhVal / $fzVal) * $num;
+  $floored : math.floor($tmp);
+  $lineHeight : calc($floored / $num); 
+  @return $lineHeight;
+}
 
 // ==================================================
 // 文字の太さをキーワード指定で返却します。
