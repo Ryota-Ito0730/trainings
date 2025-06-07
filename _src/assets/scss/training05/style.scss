@@ -60,6 +60,8 @@ PC版スタイル
     h1 {
       font-size: fz(28);
       line-height: lh(28,48);
+      // letter-spacing: ls(5);
+      letter-spacing: ls(5,f);
     }
 	}
 	&__lead {

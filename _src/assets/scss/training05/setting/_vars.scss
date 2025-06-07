@@ -80,3 +80,24 @@ $weight:(
 @function weight($name) {
   @return map.get($weight, $name);
 }
+
+// ==================================================
+// letter-spacingをemで計算し、返却します。
+// 暫定的にfigma、Adobe XDのデザインカンプから取得する値を想定しています。
+//
+// 例)
+// Figmaのデザインカンプで5%と指定されている場合
+// [scss入力時]
+//  p { letter-spacing: ls(5,f); }
+// [コンパイル後]
+//  p { letter-spacing: 0.01em; }
+// ==================================================
+@function ls($tr,$tool) {
+  @if $tool == "f" { // figma
+    $letterSpacing: calc($tr / 100) + em;
+    @return $letterSpacing;
+  } @else if $tool == "x" {// XD
+    $letterSpacing: calc($tr / 1000) + em;
+    @return $letterSpacing;
+  }
+}
