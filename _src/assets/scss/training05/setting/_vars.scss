@@ -2,11 +2,12 @@
 @use "sass:map";
 
 // ==================================================
-// プロダクトでよく使用する色コードをキーワード指定で返却します。
+// プロダクトでよく使用するカラーコードをキーワード指定で返却します。
+//
 // 例)
 // デザインカンプ上で確認した文字色 = #fff
 // [scss入力時]
-//  p { color(wht); }
+//  p { color:color(wht); }
 // [コンパイル後]
 //  p { color }
 $colors:(
@@ -15,7 +16,6 @@ $colors:(
   glay:#ccc,
   bgblue:#F4F9FF,
 );
-
 @function color($name) {
   @return map.get($colors, $name);
 }
