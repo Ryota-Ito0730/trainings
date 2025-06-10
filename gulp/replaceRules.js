@@ -27,23 +27,31 @@ wpTermName = タームの名前に相当するテキスト
 
 export const htmlReplaceRules = [
   {
-    pattern: /:wpTitle\((.*?)\)/g,
+    pattern: /wpTitle\((.*?)\)/g,
     replacement: '$1'
   },
   {
-    pattern: /:wpContent\((.*?)\)/g,
+    pattern: /wpContent\((.*?)\)/g,
+    replacement: '$1'
+  },
+  {
+    pattern: /wpGetTDUri\((.*?)\)/g,
     replacement: '$1'
   },
 ];
 
 export const phpReplaceRules = [
   {
-    pattern: /:wpTitle\((.*?)\)/g,
+    pattern: /wpTitle\((.*?)\)/g,
     replacement: '<?php the_title(); ?>'
   },
   {
-    pattern: /:wpContent\((.*?)\)/g,
+    pattern: /wpContent\((.*?)\)/g,
     replacement: '<?php the_content(); ?>'
+  },
+  {
+    pattern: /wpGetTDUri\((.*?)\)/g,
+    replacement: '<?php echo get_template_directory_uri(); ?>$1'
   },
 ];
 

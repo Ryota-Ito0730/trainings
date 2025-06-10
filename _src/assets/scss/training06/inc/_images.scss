@@ -1,0 +1,25 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+.images {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  &__item{
+    width: calc(100% / 3);
+  }
+  &__img{
+    object-fit: cover;
+    height: 500px;
+  }
+}
+@media (max-width:834px) {
+  .images {
+    &__item{
+      width: 100%;
+    }
+    &__img{
+      width: 100%;
+    }
+  }
+}

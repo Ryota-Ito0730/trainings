@@ -1,0 +1,12 @@
+
+//- 配列を改行させて定義する際は"-"の次の行から変数定義をするとエラーにならずに済む
+- 
+  const imagePaths = [
+    "/assets/img/training05/image01.png",
+    "/assets/img/training05/image02.png",
+    "/assets/img/training05/image03.png",
+  ];
+.images
+  each imagePath in imagePaths
+    .images__item
+      img.images__img(src=imagePath, alt="")

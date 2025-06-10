@@ -1,0 +1,28 @@
+//- 配列を改行させて定義する際は"-"の次の行から変数定義をするとエラーにならずに済む
+- 
+  const recipeValues = [
+    {
+      ingredient : "テキストテキスト",
+      count : "1"
+    },
+    {
+      ingredient : "テキストテキスト",
+      count : "1"
+    },
+    {
+      ingredient : "テキストテキスト",
+      count : "1"
+    },
+    {
+      ingredient : "テキストテキスト",
+      count : "1"
+    },
+    {
+      ingredient : "テキストテキスト",
+      count : "1"
+    },
+  ];
+dl.desc-list
+  each recipeValue in recipeValues
+    dd.desc-list__dd=recipeValue.ingredient
+    dt.desc-list__dt=recipeValue.count+"個"

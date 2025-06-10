@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+html {
+  letter-spacing: 0;
+  line-height: 1.5;
+  color: #2d2d2d;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.visible-sp {
+  display: none;
+}
+
+.visible-pc {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .visible-sp {
+    display: block;
+  }
+  .visible-pc {
+    display: none;
+  }
+}

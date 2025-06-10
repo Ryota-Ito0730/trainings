@@ -1,0 +1,41 @@
+doctype html
+html(lang="ja")
+  -const headTitle = "training06";
+  -const directoryPath = "training06";
+  include inc/_head.pug
+  body 
+    .tr06
+      .mv
+        .mv__inner
+          img.mv__img(src=wpGetTDUri("/assets/img/training06/mv.png"), alt="Wooden Jewelry(木製のアクセサリー)が女性の左手首に付けられている。")
+    
+      header.header 
+        .header__inner
+          h1.site-title
+            a.logo(href="#")
+              img(src=wpGetTDUri("/assets/img/training06/logo.png"), alt="Wooden Jewelry(ロゴ)")
+          .nav
+            include inc/_list.pug
+      .tr06__content
+        main.main 
+          .main__inner
+            
+            section.sec#concept
+              .sec__inner
+                .content
+                  .content__img
+                    img(src=wpGetTDUri("/assets/img/training06/concept.png"), alt="左手薬指に木製の指輪が着けられている")
+                  .content__desc
+                    h2.sec-title 私たちの考えるジュエリーとは
+                    span.sec-title-en Concept
+                    p.sec-text テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            section.sec#work
+              .sec__inner
+                .content.content--rev
+                  .content__img
+                    img(src=wpGetTDUri("/assets/img/training06/work.png"), alt="Wooden Jewelry(木製のアクセサリー)の制作用作業台")
+                  .content__desc
+                    h2.sec-title ハンドメイドにこだわる理由
+                    span.sec-titl-en Work
+                    p.sec-text テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        include inc/_footer.pug

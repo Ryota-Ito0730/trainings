@@ -1,0 +1,11 @@
+// 色設定、文字サイズ
+@use "setting/vars" as *;
+
+.orderd-list {
+  margin: 19px 0 0 0;
+  .orderd-list__item {
+    list-style: decimal;
+    margin: 0 0 5px 1em;
+    border-bottom: 1px dotted color(glay);
+  }
+}

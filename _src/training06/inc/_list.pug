@@ -1,0 +1,16 @@
+//- 配列を改行させて定義する際は"-"の次の行から変数定義をするとエラーにならずに済む
+- 
+  const listValues = [
+    "Concept",
+    "Work",
+    "Contact",
+  ];
+ul.list
+  each listValue, index in listValues
+    if listValue === "Contact"
+      li.list__item
+        a.list__link(href="mailto:xxxxx@xxx.xxx?subject=お問い合わせ")= listValue
+    else
+      -const idName = listValue.toLowerCase();
+      li.list__item
+        a.list__link(href=`#${idName}`)= listValue

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.header__inner {
+  padding: 60px 10px 15px;
+  max-width: 1020px;
+  margin: auto;
+}
+
+.footer {
+  padding: 75px 0 8px 0;
+}
+.footer__inner {
+  max-width: 680px;
+  margin: auto;
+  padding: 0 40px;
+}
+.footer__copy {
+  font-size: 0.625rem;
+}
+
+.mv__bg {
+  height: 600px;
+  background: url(../../img/training01/mv.png) no-repeat center center/cover;
+}
+
+.sec {
+  padding: 76px 15px 0;
+  max-width: 966px;
+  margin: auto;
+}
+.sec__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 0;
+}
+.sec__title::before {
+  position: absolute;
+  content: "";
+  background: currentColor;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.content {
+  max-width: 528px;
+  margin: 70px auto 0;
+}
+.content__inner {
+  display: flex;
+  gap: 30px;
+}
+
+.content-img {
+  min-width: 100px;
+  width: 100px;
+  align-self: center;
+}
+
+.content-desc .head03 {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.content-desc .desc {
+  font-size: 0.875rem;
+  margin: 16px 0 0 0;
+  line-height: 1.55em;
+  letter-spacing: 0.3px;
+}
+
+.sec--bicycle {
+  padding: 94px 15px 0;
+}
+
+.content--bicycle {
+  max-width: 858px;
+  margin: 60px auto 0;
+}
+.content--bicycle .content__inner--bicycle {
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+}
+
+.media__desc {
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+.media__title {
+  font-size: 1rem;
+}
+.media__text {
+  margin: 12px 0 0 0;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 767px) {
+  .mv__bg {
+    background: url(../../img/training01/mv_sp.png) no-repeat center center/cover;
+  }
+  .content {
+    margin: 60px 0 0 0;
+  }
+  .content__inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content-desc .desc {
+    line-height: 1.43em;
+  }
+  .sec--bicycle {
+    padding: 107px 15px 0;
+  }
+  .content--bicycle .content__inner--bicycle {
+    gap: 30px;
+  }
+}

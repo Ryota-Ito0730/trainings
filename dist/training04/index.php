@@ -20,7 +20,7 @@
         <section class="sec">
           <div class="sec__inner">
             <div class="content">
-              <h1 class="font-title"><?php the_title(); ?></h1>
+              <h1 class="font-title">:<?php the_title(); ?></h1>
               <div class="content__inner">
                 <p class="font-text content__text">日々の料理レシピをまとめています。<br>和食や洋食、中華、お菓子までいろいろな料理レシピをアップしていますので、<br>みなさんの献立にお役立てくださいね！</p>
               </div>

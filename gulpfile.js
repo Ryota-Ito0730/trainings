@@ -71,9 +71,14 @@ const compileSass = () => {
 // PHP側はWordPressのテンプレートタグやループ処理に置換します
 import {htmlReplaceRules, phpReplaceRules} from "./gulp/replaceRules.js";
 
+import { pugLocals } from './gulp/pugLocals.js';
+
 // 独自ルールによる置換処理(HTML)
 const compilePugToHtml = () => {
-  let stream = src(pathObj.pug.src).pipe(pug({ pretty: true })); 
+  let stream = src(pathObj.pug.src).pipe(pug({
+    pretty: true,
+    locals: pugLocals
+  })); 
   htmlReplaceRules.forEach(rule => {
     stream = stream.pipe(replace(rule.pattern, rule.replacement));
   });
@@ -81,7 +86,10 @@ const compilePugToHtml = () => {
 };
 // 独自ルールによる置換処理(PHP)
 const compilePugToPHP = () => {
-  let stream = src(pathObj.pug.src).pipe(pug({ pretty: true }));
+  let stream = src(pathObj.pug.src).pipe(pug({
+    pretty: true,
+    locals: pugLocals
+  })); 
   phpReplaceRules.forEach(rule => {
     stream = stream.pipe(replace(rule.pattern, rule.replacement));
   });
